@@ -4,32 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Elizabeth Khubedzheva" />
+    <link rel="stylesheet" href="/styles.css" />
     <title>Facts About The World</title>
+    <style>
+      a[name] h2 {
+        font-size: 32px;
+        color: #647e5e;
+      }
+
+      a[name]:hover {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      ol {
+        padding-left: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      ol a:link,
+      ol a:visited {
+        color: #647e5e;
+        font-weight: 700;
+        font-size: 20px;
+        text-decoration: none;
+      }
+
+      ol a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
-  <body bgcolor="#997b66" link="#241d17" vlink="#241d17" alink="#dde5b6">
-    <em><a href="index.html" style="text-decoration: none">< Back Home</a></em>
+  <body>
+    <a class="back-btn" href="index.html">< Back Home</a>
     <h1>Did You Know?</h1>
-    <em>
+    <p class="slogan">
       The world is full of surprises. Discover mind-blowing facts about the geography, culture, and
       history of your favorite places.
-    </em>
-    <h2>Sections:</h2>
-    <ol type="1">
-      <li>
-        <a href="#geography"><b>Geography & Nature</b></a>
-      </li>
+    </p>
 
-      <li>
-        <a href="#culture"><b>Culture & Traditions</b></a>
-      </li>
-      <li>
-        <a href="#food"><b>Food & Gastronomy</b></a>
-      </li>
-      <li>
-        <a href="#myths"><b>Myths vs. Reality</b></a>
-      </li>
+    <h2 style="color: #24282b">Sections:</h2>
+    <ol type="1">
+      <li><a href="#geography">Geography & Nature</a></li>
+      <li><a href="#culture">Culture & Traditions</a></li>
+      <li><a href="#food">Food & Gastronomy</a></li>
+      <li><a href="#myths">Myths vs Reality</a></li>
     </ol>
-    <hr width="50%" color="#6c5747" />
+    <hr />
 
     <a name="geography"><h2>Geography & Nature</h2></a>
     <ul type="square">
@@ -73,10 +96,14 @@
     </ul>
     <br />
 
-    <a name="myths"><h2>Myths vs. Reality</h2></a>
+    <a name="myths"><h2>Myths vs Reality</h2></a>
     <dl>
       <dt>
-        <b><a name="myth-london">Do people in London really drink tea at 5 PM every day?</a></b>
+        <b
+          ><a name="myth-london" style="color: #393732; font-size: 18px"
+            >Do people in London really drink tea at 5 PM every day?</a
+          ></b
+        >
       </dt>
       <dd>
         No, it is a myth that Londoners or British people in general stop everything to drink tea
