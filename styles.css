@@ -63,7 +63,7 @@ nav > a:active {
 }
 
 header > a.back-btn:link,
-a.back-btn:visited {
+header > a.back-btn:visited {
   text-decoration: none;
   font-weight: 700;
   font-style: italic;
