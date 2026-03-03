@@ -12,6 +12,7 @@ body {
   max-width: 70%;
   margin: 0 auto;
   background-color: #f9f8f3;
+  border-radius: 10px;
   padding: 40px;
 }
 
@@ -25,19 +26,19 @@ header {
   position: sticky;
   top: -20px;
   padding: 0 40px;
+  border-radius: 20px;
 }
 
 #main-title {
-  margin-right: 80px;
   color: #f9f8f3;
   font-size: 48px;
   font-weight: 900;
-  margin: 30px 80px 30px 10px;
+  margin: 20px 30px 20px 10px;
 }
 
 nav {
   display: flex;
-  gap: 60px;
+  gap: 40px;
   justify-content: space-between;
   margin: auto;
 }
@@ -60,6 +61,10 @@ nav > a:hover {
 
 nav > a:active {
   transform: scale(0.95);
+}
+
+.back-btn::before {
+  content: '❮';
 }
 
 header > a.back-btn:link,
@@ -94,6 +99,20 @@ h3 {
   margin: 12px 0 14px;
   color: #24282b;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1:first-child {
+  margin-top: 0;
+  font-size: 42px;
+}
+
+.container h1::after {
+  content: '';
+  display: block;
+  background-color: #647e5e;
+  height: 3px;
+  width: 180px;
+  border-radius: 4px;
 }
 
 p {
@@ -144,12 +163,24 @@ hr {
 .img-center img {
   width: 30%;
   min-width: 200px;
+  border-radius: 20px;
+}
+
+.img-right {
+  width: 20%;
+  min-width: 80px;
+  border-radius: 20px;
+  float: right;
+  margin-left: 40px;
 }
 
 .slogan {
   font-style: italic;
   color: #65705c;
-  text-indent: 0;
+  display: block;
+  margin-bottom: 40px;
+  font-size: 16px;
+  max-width: 90%;
 }
 
 ol {
@@ -175,7 +206,7 @@ table {
 }
 
 caption {
-  margin: 8px auto;
+  margin: 8px auto 20px;
   font-size: 24px;
   color: #24282b;
   font-weight: 700;
