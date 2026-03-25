@@ -71,6 +71,22 @@
         going according to your liking but don't spoil your possibly great vacation due to
         unnecessary worry.
       </p>
+      <br />
+      <footer>
+        <a id="author">About author</a>
+        <a id="report">Found an error? Let us know</a>
+        <script>
+          const report = document.getElementById('report');
+          report.addEventListener('click', function (event) {
+            let problem = prompt('Write about a problem here:');
+            if (problem) {
+              alert(`Thank you! Your report ("${problem}") will be rewied.`);
+              report.firstChild.nodeValue = 'Thank you for your help! ✨';
+              report.style.color = '#65705c';
+            }
+          });
+        </script>
+      </footer>
     </div>
   </body>
 </html>
