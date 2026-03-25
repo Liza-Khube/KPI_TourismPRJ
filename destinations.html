@@ -36,9 +36,7 @@
         in Milan.
       </p>
 
-      <a class="more-inf" href="https://www.britannica.com/place/Italy" target="_blank"
-        >More information</a
-      >
+      <a class="more-inf" name="Italy" target="_blank">More information</a>
 
       <a class="img-center" href="./imgs/italy.jpg" target="_blank"
         ><img src="./imgs/italy.jpg"
@@ -55,9 +53,7 @@
         developed in manufacturing, trade, and shipping, and it is a regional financial center.
       </p>
 
-      <a class="more-inf" href="https://www.britannica.com/place/Hong-Kong" target="_blank">
-        More information
-      </a>
+      <a class="more-inf" name="Hong-Kong" target="_blank"> More information </a>
 
       <a class="img-center" href="./imgs/hong-kong.jpg" target="_blank"
         ><img src="./imgs/hong-kong.jpg"
@@ -77,12 +73,7 @@
         55°F (13°C) in July. The average rainfall is 47 inches (1,200 mm) per year.
       </p>
 
-      <a
-        class="more-inf"
-        href="https://www.britannica.com/place/Sydney-New-South-Wales"
-        target="_blank"
-        >More information</a
-      >
+      <a class="more-inf" name="Sydney-New-South-Wales">More information</a>
 
       <a class="img-center" href="./imgs/sydney.jpg" target="_blank"
         ><img src="./imgs/sydney.jpg"
@@ -100,9 +91,7 @@
         concentrated at Westminster.
       </p>
 
-      <a class="more-inf" href="https://www.britannica.com/place/London" target="_blank"
-        >More information</a
-      >
+      <a class="more-inf" name="London" target="_blank">More information</a>
 
       <a class="more-inf" href="facts.html#myth-london"
         >Do people in London really drink tea at 5 PM every day?</a
@@ -249,5 +238,18 @@
         </tbody>
       </table>
     </div>
+    <script>
+      document.querySelectorAll('.more-inf').forEach((link) => {
+        link.addEventListener('click', function (event) {
+          if (confirm('Go to the site?')) {
+            location.href = `https://www.britannica.com/place/${link.getAttribute('name')}`;
+          }
+        });
+      });
+
+      const extraHr = document.querySelector('br + hr');
+      extraHr.remove();
+    </script>
+    <script src="./scripts.js"></script>
   </body>
 </html>
