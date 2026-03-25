@@ -82,6 +82,10 @@ header > a.back-btn:hover {
   transform: translateX(-12px);
 }
 
+footer {
+  margin-top: 80px;
+}
+
 .main-img {
   height: 400px;
   background-image: url('./imgs/main-header.jpg');
@@ -131,14 +135,48 @@ a:link {
   text-decoration: none;
 }
 
-a:visited {
+a:visited,
+.more-inf:visited,
+a.more-inf {
   color: #c1aa7f;
   background-color: transparent;
 }
 
-a:hover {
+a:hover,
+.more-inf:visited:hover {
   color: #65705c;
   text-decoration: underline;
+  cursor: pointer;
+}
+
+#location-picker,
+#find-travelers {
+  display: inline-block;
+  text-align: center;
+  border: 2px solid #65705c;
+  padding: 14px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+#location-picker:hover,
+#find-travelers:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#location-picker-link,
+#find-travelers-link {
+  color: #c1aa7f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#location-picker-link:hover,
+#find-travelers-link:hover {
+  color: #65705c;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 hr {
@@ -155,9 +193,38 @@ hr {
   margin: 12px auto;
 }
 
-.img-center {
+.more-about {
+  height: 32px;
+  position: absolute;
+  top: 480px;
+  right: 20px;
+  cursor: pointer;
+}
+
+#report {
   display: block;
   text-align: center;
+  color: #ddd1b9;
+  cursor: pointer;
+}
+
+.img-center,
+#author {
+  display: block;
+  text-align: center;
+}
+
+#travel-counter-link {
+  display: inline-block;
+  font-size: 38px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.6s ease;
+}
+
+#travel-counter-link:hover {
+  color: #7d7159;
+  transform: scale(1.08);
 }
 
 .img-center img {
@@ -172,6 +239,48 @@ hr {
   border-radius: 20px;
   float: right;
   margin-left: 40px;
+}
+
+#traveler1 {
+  height: 100px;
+  position: absolute;
+  top: 600px;
+  left: 40px;
+}
+
+#traveler2 {
+  height: 100px;
+  position: absolute;
+  top: 1100px;
+  right: 40px;
+}
+
+#traveler3 {
+  height: 100px;
+  position: absolute;
+  top: 1600px;
+  left: 40px;
+}
+
+#traveler4 {
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  right: 40px;
+}
+
+#traveler5 {
+  height: 100px;
+  position: absolute;
+  top: 2100px;
+  left: 40px;
+}
+
+#traveler6 {
+  height: 100px;
+  position: absolute;
+  top: 3400px;
+  right: 40px;
 }
 
 .slogan {
