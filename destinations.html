@@ -160,6 +160,7 @@
           <td>Experience the northern lights and the magic of snow.</td>
         </tr>
       </table>
+      <br />
       <hr />
       <table id="season-map">
         <caption>
@@ -248,6 +249,27 @@
           </tr>
         </tbody>
       </table>
+      <div style="text-align: center; margin: 28px auto">
+        <p id="location-picker">
+          Can`t choose between two destinations? A
+          <a id="location-picker-link">Location Picker</a> will help
+        </p>
+      </div>
+      <footer>
+        <a id="author">About author</a>
+        <a id="report">Found an error? Let us know</a>
+        <script>
+          const report = document.getElementById('report');
+          report.addEventListener('click', function (event) {
+            let problem = prompt('Write about a problem here:');
+            if (problem) {
+              alert(`Thank you! Your report ("${problem}") will be rewied.`);
+              report.firstChild.nodeValue = 'Thank you for your help! ✨';
+              report.style.color = '#65705c';
+            }
+          });
+        </script>
+      </footer>
     </div>
     <script>
       document.querySelectorAll('.more-inf').forEach((link) => {
