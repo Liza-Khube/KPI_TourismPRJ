@@ -38,9 +38,15 @@
 
       <a class="more-inf" name="Italy" target="_blank">More information</a>
 
-      <a class="img-center" href="./imgs/italy.jpg" target="_blank"
-        ><img src="./imgs/italy.jpg"
-      /></a>
+      <div class="img-card">
+        <a href="./imgs/italy1.jpg" target="_blank"
+          ><img src="./imgs/italy1.jpg" data-index="0" alt="Italy"
+        /></a>
+        <div class="controls" data-imgs="./imgs/italy1.jpg,./imgs/italy2.jpg,./imgs/italy3.jpg">
+          <button data-action="prev">« previous</button>
+          <button data-action="next">next »</button>
+        </div>
+      </div>
 
       <h2>Hong Kong</h2>
       <p>
@@ -55,9 +61,18 @@
 
       <a class="more-inf" name="Hong-Kong" target="_blank"> More information </a>
 
-      <a class="img-center" href="./imgs/hong-kong.jpg" target="_blank"
-        ><img src="./imgs/hong-kong.jpg"
-      /></a>
+      <div class="img-card">
+        <a href="./imgs/hong-kong1.jpg" target="_blank"
+          ><img src="./imgs/hong-kong1.jpg" data-index="0" alt="Hong-Kong"
+        /></a>
+        <div
+          class="controls"
+          data-imgs="./imgs/hong-kong1.jpg,./imgs/hong-kong2.jpg,./imgs/hong-kong3.jpg"
+        >
+          <button data-action="prev">« previous</button>
+          <button data-action="next">next »</button>
+        </div>
+      </div>
 
       <h2>Sydney</h2>
       <p>
@@ -75,9 +90,15 @@
 
       <a class="more-inf" name="Sydney-New-South-Wales">More information</a>
 
-      <a class="img-center" href="./imgs/sydney.jpg" target="_blank"
-        ><img src="./imgs/sydney.jpg"
-      /></a>
+      <div class="img-card">
+        <a href="./imgs/sydney1.jpg" target="_blank"
+          ><img src="./imgs/sydney1.jpg" data-index="0" alt="Sydney"
+        /></a>
+        <div class="controls" data-imgs="./imgs/sydney1.jpg,./imgs/sydney2.jpg,./imgs/sydney3.jpg">
+          <button data-action="prev">« previous</button>
+          <button data-action="next">next »</button>
+        </div>
+      </div>
 
       <h2>London</h2>
       <p>
@@ -97,9 +118,16 @@
         >Do people in London really drink tea at 5 PM every day?</a
       >
 
-      <a class="img-center" href="./imgs/london.jpg" target="_blank"
-        ><img src="./imgs/london.jpg"
-      /></a>
+      <div class="img-card">
+        <a href="./imgs/london1.jpg" target="_blank"
+          ><img src="./imgs/london1.jpg" data-index="0" alt="London"
+        /></a>
+        <div class="controls" data-imgs="./imgs/london1.jpg,./imgs/london2.jpg,./imgs/london3.jpg">
+          <button data-action="prev">« previous</button>
+          <button data-action="next">next »</button>
+        </div>
+      </div>
+
       <img id="traveler1" src="./imgs/travelers/1.png" />
       <img id="traveler2" src="./imgs/travelers/2.png" />
       <img id="traveler3" src="./imgs/travelers/3.png" />
@@ -114,7 +142,7 @@
       </div>
       <hr />
       <table id="seasons-tbl" style="width: 90%">
-        <caption>
+        <caption onmouseover="onHoverHeader(event)" onmouseout="onLeaveHeader(event)">
           Where to go in every season
         </caption>
         <tr>
@@ -163,7 +191,7 @@
       <br />
       <hr />
       <table id="season-map">
-        <caption>
+        <caption id="map-name">
           Season Map
         </caption>
 

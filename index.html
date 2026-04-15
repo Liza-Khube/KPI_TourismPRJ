@@ -59,20 +59,10 @@
         referrerpolicy="no-referrer-when-downgrade"
       ></iframe>
       <br />
-      <footer>
-        <a id="author">About author</a>
-        <a id="report">Found an error? Let us know</a>
-        <script>
-          const report = document.getElementById('report');
-          report.addEventListener('click', function () {
-            let problem = prompt('Write about a problem here:');
-            if (problem) {
-              alert(`Thank you! Your report ("${problem}") will be rewied.`);
-              report.firstChild.nodeValue = 'Thank you for your help! ✨';
-              report.style.color = '#65705c';
-            }
-          });
-        </script>
+      <footer id="footer-menu">
+        <input type="button" data-action="showAuthor" value="About author" />
+        <input type="button" data-action="reportError" value="Found an error? Let us know" />
+        <input type="button" data-action="changeTheme" value="Change Theme" />
       </footer>
     </div>
     <script type="module" src="./scripts/index.js"></script>
