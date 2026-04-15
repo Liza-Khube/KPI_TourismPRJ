@@ -83,7 +83,20 @@ header > a.back-btn:hover {
 }
 
 footer {
+  text-align: center;
   margin-top: 80px;
+}
+
+footer > input {
+  background-color: #4d4a3f;
+  border: none;
+  border-radius: 100px;
+  color: white;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer;
 }
 
 .main-img {
@@ -209,7 +222,7 @@ hr {
   cursor: pointer;
 }
 
-.img-center,
+.img-card,
 #author {
   display: block;
   text-align: center;
@@ -228,10 +241,18 @@ hr {
   transform: scale(1.08);
 }
 
-.img-center img {
+.img-card img {
   width: 30%;
   min-width: 200px;
   border-radius: 20px;
+}
+.img-card button {
+  border: 2px #4d4a3f;
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
 }
 
 .img-right {
@@ -391,4 +412,8 @@ caption {
 }
 .low {
   background-color: white;
+}
+
+#myth-reality > dt {
+  cursor: pointer;
 }
