@@ -258,31 +258,8 @@
       <footer>
         <a id="author">About author</a>
         <a id="report">Found an error? Let us know</a>
-        <script>
-          const report = document.getElementById('report');
-          report.addEventListener('click', function (event) {
-            let problem = prompt('Write about a problem here:');
-            if (problem) {
-              alert(`Thank you! Your report ("${problem}") will be rewied.`);
-              report.firstChild.nodeValue = 'Thank you for your help! ✨';
-              report.style.color = '#65705c';
-            }
-          });
-        </script>
       </footer>
     </div>
-    <script>
-      document.querySelectorAll('.more-inf').forEach((link) => {
-        link.addEventListener('click', function (event) {
-          if (confirm('Go to the site?')) {
-            location.href = `https://www.britannica.com/place/${link.getAttribute('name')}`;
-          }
-        });
-      });
-
-      const extraHr = document.querySelector('br + hr');
-      extraHr.remove();
-    </script>
-    <script src="./scripts.js"></script>
+    <script type="module" src="./scripts/destinations.js"></script>
   </body>
 </html>

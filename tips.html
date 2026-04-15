@@ -75,19 +75,21 @@
       <footer>
         <a id="author">About author</a>
         <a id="report">Found an error? Let us know</a>
-        <script>
-          const report = document.getElementById('report');
-          report.addEventListener('click', function (event) {
-            let problem = prompt('Write about a problem here:');
-            if (problem) {
-              alert(`Thank you! Your report ("${problem}") will be rewied.`);
-              report.firstChild.nodeValue = 'Thank you for your help! ✨';
-              report.style.color = '#65705c';
-            }
-          });
-        </script>
       </footer>
     </div>
-    <script src="./scripts.js"></script>
+    <script>
+      document.write(
+        "<div id='wish' style='text-align: center; color: #c1aa7f; padding: 30px; cursor: pointer;'><em>Have a nice day!</em></div>",
+      );
+      const sayThankAndRemove = (event) => {
+        alert('Thank you for visiting our website 🤎');
+        wish.removeEventListener('click', sayThankAndRemove);
+        setTimeout(() => {
+          wish.remove();
+        }, 3000);
+      };
+      wish.addEventListener('click', sayThankAndRemove);
+    </script>
+    <script type="module" src="./scripts/tips.js"></script>
   </body>
 </html>
