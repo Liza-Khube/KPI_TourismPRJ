@@ -27,6 +27,7 @@ header {
   top: -20px;
   padding: 0 40px;
   border-radius: 20px;
+  z-index: 1000;
 }
 
 #main-title {
