@@ -11,3 +11,35 @@ export const getReport = (event) => {
     elem.style.color = '#65705c';
   }
 };
+
+export const dragAndDrop = (event, elemType) => {
+  const elem = event.target;
+  if (elem.tagName !== elemType) return;
+  elem.classList.add('dragging');
+  let shiftX = event.clientX - elem.getBoundingClientRect().left;
+  let shiftY = event.clientY - elem.getBoundingClientRect().top;
+  elem.style.position = 'absolute';
+  elem.style.zIndex = 900;
+
+  document.body.append(elem);
+
+  function moveAt(pageX, pageY) {
+    elem.style.left = pageX - shiftX + 'px';
+    elem.style.top = pageY - shiftY + 'px';
+  }
+  moveAt(event.pageX, event.pageY);
+
+  function onMouseMove(event) {
+    moveAt(event.pageX, event.pageY);
+  }
+  document.addEventListener('mousemove', onMouseMove);
+
+  elem.onmouseup = function () {
+    elem.classList.remove('dragging');
+    document.removeEventListener('mousemove', onMouseMove);
+    elem.onmouseup = null;
+  };
+  elem.ondragstart = function () {
+    return false;
+  };
+};
