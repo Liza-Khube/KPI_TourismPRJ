@@ -1,4 +1,4 @@
-import { getReport, alertAboutAuthor } from './utils.js';
+import { getReport, alertAboutAuthor, dragAndDrop } from './utils.js';
 
 author.addEventListener('click', () => {
   alertAboutAuthor('Khubedzheva', 'Elizabeth');
@@ -35,4 +35,36 @@ const mythReality = document.getElementById('myth-reality');
       selectedElem = null;
     }
   };
+  mythReality.onmousedown = (event) => {
+    if (event.target.tagName == 'B') return false;
+  };
 }
+
+sections.addEventListener('mouseover', (event) => {
+  const target = event.target.closest('li');
+  if (!target) return;
+  const relatedTarget = event.relatedTarget;
+  if (target.contains(relatedTarget)) return;
+
+  target.style.backgroundColor = 'rgba(193, 170, 127, 0.15)';
+  target.style.transform = 'translateX(10px)';
+  target.style.borderLeft = '4px solid #647e5e';
+  target.style.transition = 'all 0.3s ease';
+});
+
+sections.addEventListener('mouseout', (event) => {
+  const target = event.target.closest('li');
+  if (!target) return;
+  const relatedTarget = event.relatedTarget;
+  if (target.contains(relatedTarget)) return;
+
+  target.style.backgroundColor = '';
+  target.style.transform = '';
+  target.style.borderLeft = '';
+});
+
+document.addEventListener('mousedown', (event) => {
+  if (event.target.classList.contains('puzzle-piece')) {
+    dragAndDrop(event, 'IMG');
+  }
+});
