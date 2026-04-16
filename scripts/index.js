@@ -85,3 +85,28 @@ travelCounter.addEventListener('click', () => {
       `${rank}`,
   );
 });
+
+const container = document.querySelector('.container');
+
+container.addEventListener('mouseover', (event) => {
+  const target = event.target.closest('li');
+  if (!target) return;
+  const relatedTarget = event.relatedTarget;
+  if (target.contains(relatedTarget)) return;
+
+  target.style.backgroundColor = 'rgba(193, 170, 127, 0.15)';
+  target.style.transform = 'translateX(10px)';
+  target.style.borderLeft = '4px solid #647e5e';
+  target.style.transition = 'all 0.3s ease';
+});
+
+container.addEventListener('mouseout', (event) => {
+  const target = event.target.closest('li');
+  if (!target) return;
+  const relatedTarget = event.relatedTarget;
+  if (target.contains(relatedTarget)) return;
+
+  target.style.backgroundColor = '';
+  target.style.transform = '';
+  target.style.borderLeft = '';
+});
